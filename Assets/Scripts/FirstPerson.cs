@@ -24,8 +24,12 @@ public class FirstPerson : MonoBehaviour
         
         Vector3 movimiento = new Vector3(h, 0, v).normalized;
 
-        float anguloRotacion = Camera.main.transform.rotation.eulerAngles.y;
-        controller.Move(movimiento * velocidadMovimiento * Time.deltaTime);
-
+        float anguloRotacion = Mathf.Atan2(movimiento.x, movimiento.z) * Mathf.Rad2Deg + Camera.main.transform.rotation.eulerAngles.y;
+        if(movimiento.magnitude > 0)
+        {
+            transform.eulerAngles = new Vector3(0, anguloRotacion, 0);
+            controller.Move(movimiento * velocidadMovimiento * Time.deltaTime);
+        }
+       
     }
 }
