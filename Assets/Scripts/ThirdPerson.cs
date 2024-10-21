@@ -31,12 +31,12 @@ public class ThirdPerson : MonoBehaviour
         //Calculo el ángulo al que tengo que rotarme en función de los inputs y cámara
         
 
-        if (input.magnitude > 0)
+        if (input.sqrMagnitude > 0)
         {
 
-            float angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg + Camera.main.transform.rotation.eulerAngles.y;
+            float angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
 
-            float anguloSuave = Mathf.SmoothDampAngle(transform.eulerAngles.y, angulo, ref velocidadMovimiento, smoothTime);
+            float anguloSuave = Mathf.SmoothDampAngle(transform.eulerAngles.y, angulo, ref velocidadRotacion, smoothTime);
 
             transform.eulerAngles = new Vector3(0, anguloSuave, 0);
 
