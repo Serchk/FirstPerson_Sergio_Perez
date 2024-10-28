@@ -9,10 +9,13 @@ public class ThirdPerson : MonoBehaviour
     CharacterController controller;
 
     private float velocidadRotacion;
+
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,7 +36,7 @@ public class ThirdPerson : MonoBehaviour
 
         if (input.sqrMagnitude > 0)
         {
-
+            anim.SetBool("Walking", true);
             float angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
 
             float anguloSuave = Mathf.SmoothDampAngle(transform.eulerAngles.y, angulo, ref velocidadRotacion, smoothTime);
@@ -44,6 +47,10 @@ public class ThirdPerson : MonoBehaviour
             Vector3 movimiento = Quaternion.Euler(0, angulo, 0) * Vector3.forward;
 
             controller.Move(movimiento * velocidadMovimiento * Time.deltaTime);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
         }
     }
 }
