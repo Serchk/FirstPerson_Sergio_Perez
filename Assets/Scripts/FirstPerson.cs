@@ -7,6 +7,7 @@ public class FirstPerson : MonoBehaviour
     [Header("Movimiento")]
     [SerializeField] private float velocidadMovimiento;
     [SerializeField] private float factorGravedad;
+    [SerializeField] private float alturaSalto;
 
     [Header("Detección de Suelo")]
     [SerializeField] private float radioDeteccion;
@@ -20,14 +21,22 @@ public class FirstPerson : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
         MoverTRotar();
+
         AplicarGravedad();
-        EnSuelo();
+
+        if (EnSuelo())
+        {
+            movimientoVertical.y = 0;
+            Saltar();
+        }
     }
     void MoverTRotar()
     {
@@ -40,8 +49,9 @@ public class FirstPerson : MonoBehaviour
         //Calculo el ángulo al que tengo que rotarme en función de los inputs y cámara
         float angulo = Mathf.Atan2(input.x, input.y) * Mathf.Rad2Deg + Camera.main.transform.rotation.eulerAngles.y;
 
-            transform.eulerAngles = new Vector3(0, angulo, 0);
+            //transform.eulerAngles = new Vector3(0, angulo, 0);
 
+        transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
         if (input.magnitude > 0)
         {
             //Mi movimiento tambian ha quedado rotado en la base
@@ -61,7 +71,10 @@ public class FirstPerson : MonoBehaviour
     }
     private void Saltar()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            movimientoVertical.y = Mathf.Sqrt(-2 * factorGravedad * alturaSalto);
+        }
     }
     private void AplicarGravedad()
     {
@@ -73,5 +86,10 @@ public class FirstPerson : MonoBehaviour
         //Tirar una esfera de detección en los piescon cierto radio
         bool resultado = Physics.CheckSphere(pies.position, radioDeteccion, queEsSuelo);
         return resultado;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(pies.position, radioDeteccion);
     }
 }
