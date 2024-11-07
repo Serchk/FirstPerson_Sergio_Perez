@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class FirstPerson : MonoBehaviour
 {
+    [SerializeField] float vida;
     [Header("Movimiento")]
     [SerializeField] private float velocidadMovimiento;
     [SerializeField] private float factorGravedad;
@@ -37,6 +39,10 @@ public class FirstPerson : MonoBehaviour
             movimientoVertical.y = 0;
             Saltar();
         }
+    }
+    public void RecibirDanho(float danhoEnemigo)
+    {
+        vida -= danhoEnemigo;
     }
     void MoverTRotar()
     {
