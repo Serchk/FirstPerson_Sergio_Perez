@@ -2,45 +2,117 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
 public class Enemigo : MonoBehaviour
 {
+    [SerializeField] float vidas;
     [SerializeField] Transform puntoAtaque;
     [SerializeField] private float radioAtaque;
     [SerializeField] private LayerMask queEsDanhable;
     [SerializeField] private ArmaSO misDatos;
 
+    
     private bool puedoDanhar = true;
 
     private NavMeshAgent agent;
     private FirstPerson player;
-    Animator animator;
+    Animator anim;
 
     [SerializeField] private float danhoEnemigo;
 
     private bool ventanaAbierta;
 
     Rigidbody[] huesos;
+
+    public float Vidas { get => vidas; set => vidas = value; }
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         player = GameObject.FindObjectOfType<FirstPerson>();
 
         huesos = GetComponentsInChildren<Rigidbody>();
-
-        for(int i = 0; i < huesos.Length; i++)
-        {
-            huesos[i].isKinematic = true;
-        }
+        CambiarEstadoHuesos(true);
     }
 
-
+    
     // Update is called once per frame
     void Update()
     {
+        Perseguir();
         agent.SetDestination(player.gameObject.transform.position);
+        if(ventanaAbierta && puedoDanhar)
+        {
+            DetectarImpacto();
+        }
+
     }
+    private void Perseguir()
+    {
+        agent.SetDestination(player.gameObject.transform.position);
+
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            agent.isStopped = true;
+            anim.SetBool("attacking", true);
+        }
+    }
+    private void FinAtaque()
+    {
+        agent.isStopped = false;
+        anim.SetBool("attacking", false);
+        puedoDanhar = true;
+    }
+
+    private void AbrirVentanaAtaque()
+    {
+        ventanaAbierta = true;
+    }
+    private void CerrarVentanaAtaque()
+    {
+        ventanaAbierta = false;
+    }
+    private void DetectarImpacto()
+    {
+        Collider[] collsDetectatos = Physics.OverlapSphere(puntoAtaque.position, radioAtaque, queEsDanhable);
+
+        if(collsDetectatos.Length > 0)
+        {
+            for(int i = 0; i < collsDetectatos.Length; i++)
+            {
+                collsDetectatos[i].GetComponent<FirstPerson>().RecibirDanho(danhoEnemigo);
+            }
+            puedoDanhar = false;
+        }
+    }
+
+    private void CambiarEstadoHuesos(bool estado)
+    {   
+            for (int i = 0; i < huesos.Length; i++)
+            {
+                huesos[i].isKinematic = true;
+            }
+    }
+    private void RecibirDanho(float danhoRecibido)
+    {
+        vidas -= danhoRecibido;
+
+        if (vidas <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void Morir()
+    {
+        CambiarEstadoHuesos(false);
+        anim.enabled = false;
+        agent.enabled = false;
+    }
+
     //private void DetectarImpacto()
     //{
     //    Collider[] collsDetectados = Physics.OverlapSphere(puntoAtaque.position, radioAtaque, queEsDanhable);

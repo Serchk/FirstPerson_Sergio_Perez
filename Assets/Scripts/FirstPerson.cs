@@ -93,6 +93,14 @@ public class FirstPerson : MonoBehaviour
         bool resultado = Physics.CheckSphere(pies.position, radioDeteccion, queEsSuelo);
         return resultado;
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("ParteEnemigo"))
+        {
+            Vector3 vectorPush = hit.gameObject.transform.position - transform.position;
+            hit.gameObject.GetComponent<Rigidbody>().AddForce(vectorPush.normalized * 15, ForceMode.Impulse);
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
