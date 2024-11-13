@@ -322,6 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249629784}
+  - component: {fileID: 249629788}
   - component: {fileID: 249629787}
   - component: {fileID: 249629783}
   - component: {fileID: 249629782}
@@ -475,6 +476,19 @@ MonoBehaviour:
   queEsSuelo:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &249629788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249629780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15e1853ecf914d46b4543108c497626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
 --- !u!1 &258687110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,7 +7600,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -1.0864418e-19, z: 7.31e-43, w: 0}
+  m_BoundingSphereOverride: {x: 4.9e-44, y: 6e-45, z: 1.3e-44, w: 6.65706e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -8472,7 +8486,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512735212052679}
+  - component: {fileID: 8296172669324120791}
   - component: {fileID: 8296172669324120789}
+  - component: {fileID: 8296172669324120790}
+  - component: {fileID: 8296172669324120792}
   m_Layer: 0
   m_Name: AmmoBox
   m_TagString: Untagged
@@ -8487,7 +8504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172669324120788}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -8859,6 +8876,60 @@ MonoBehaviour:
     - {x: 0.31372824, y: -0.9339185, z: -0.171379}
     - {x: 0.73171496, y: -0.05500213, z: -0.679388}
     - {x: 0.40470815, y: -0.78219855, z: -0.4736842}
+--- !u!65 &8296172669324120790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669324120788}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1250, y: 450, z: 750}
+  m_Center: {x: -0.5, y: -2.4742046e-15, z: 0.5000003}
+--- !u!114 &8296172669324120791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669324120788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d9a0f812d0a0742958ccec062befd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8296172669324120792
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669324120788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9b1c131e8d743449a53907cb65ff71f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!33 &8587989075381746357
 MeshFilter:
   m_ObjectHideFlags: 0
