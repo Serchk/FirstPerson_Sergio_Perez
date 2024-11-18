@@ -42,7 +42,10 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Perseguir();
+        if(agent.enabled)
+        {
+            Perseguir();
+        }   
         agent.SetDestination(player.gameObject.transform.position);
         if(ventanaAbierta && puedoDanhar)
         {
@@ -54,16 +57,16 @@ public class Enemigo : MonoBehaviour
     {
         agent.SetDestination(player.gameObject.transform.position);
 
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             agent.isStopped = true;
-            anim.SetBool("attacking", true);
+            anim.SetBool("Attack", true);
         }
     }
     private void FinAtaque()
     {
         agent.isStopped = false;
-        anim.SetBool("attacking", false);
+        anim.SetBool("Attack", false);
         puedoDanhar = true;
     }
 
