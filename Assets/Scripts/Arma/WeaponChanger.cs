@@ -51,6 +51,10 @@ public class WeaponChanger : MonoBehaviour
         {
             CambiarArma(2);
         }
+        if (Input.GetKeyUp(KeyCode.Alpha4) || Input.GetKeyUp(KeyCode.Keypad3))
+        {
+            CambiarArma(3);
+        }
     }
 
     private void CambiarArma(int indiceNuevaArma)
