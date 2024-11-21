@@ -27,5 +27,10 @@ public class ParteEnemigo : MonoBehaviour
             mainScript.Morir();
             //if(this.gameObject.name == "") //para accecer a una parte concreta (para reducir velocidades o danho que haga) 
         }
+
+    }
+    public void Explotar()
+    {
+
     }
 }
