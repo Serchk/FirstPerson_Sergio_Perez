@@ -48,7 +48,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerzaImpulse: 25
+  radioExplosion: 0
+  fuerzaExplosion: 0
   explosion: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  queEsExplotable:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &-454198986615638046
 Rigidbody:
   m_ObjectHideFlags: 0

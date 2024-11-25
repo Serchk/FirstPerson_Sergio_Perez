@@ -7,7 +7,10 @@ public class GranadaPatata : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] private float fuerzaImpulse;
+
+    //[Header "Explosion"]
     [SerializeField] private float radioExplosion;
+    [SerializeField] private float fuerzaExplosion;
     [SerializeField] private GameObject explosion;
     [SerializeField] private LayerMask queEsExplotable;
 
@@ -36,7 +39,7 @@ public class GranadaPatata : MonoBehaviour
             {
                 if (buffer[i].TryGetComponent(out ParteEnemigo scriptHueso))
                 {
-                    scriptHueso.Explotar();
+                    scriptHueso.Explotar(fuerzaExplosion, transform.position, radioExplosion, 3.5f);
                 }
             }
         }

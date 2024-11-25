@@ -19,23 +19,23 @@ public class WeaponChanger : MonoBehaviour
     {
         CambiarArmaConTeclado();
 
-        CambiarArmaConRaton();
+        //CambiarArmaConRaton();
 
     }
 
-    private void CambiarArmaConRaton()
-    {
-        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+    //private void CambiarArmaConRaton()
+    //{
+    //    float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
 
-        if (scrollWheel > 0)
-        {
-            CambiarArma(indiceArmaActual + 1);
-        }
-        if (scrollWheel < 0)
-        {
-            CambiarArma(indiceArmaActual - 1);
-        }
-    }
+    //    if (scrollWheel > 0)
+    //    {
+    //        CambiarArma(indiceArmaActual + 1);
+    //    }
+    //    if (scrollWheel < 0)
+    //    {
+    //        CambiarArma(indiceArmaActual - 1);
+    //    }
+    //}
 
     private void CambiarArmaConTeclado()
     {

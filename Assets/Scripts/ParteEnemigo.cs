@@ -6,10 +6,13 @@ public class ParteEnemigo : MonoBehaviour
 {
     [SerializeField] private Enemigo mainScript;
     [SerializeField] private float multiplicadorDanho;
+
+    private Rigidbody rb;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -29,8 +32,9 @@ public class ParteEnemigo : MonoBehaviour
         }
 
     }
-    public void Explotar()
+    public void Explotar(float fuerzaExplosion, Vector3 puntoImpacto, float radioExplosion, float upModifier)
     {
-
+        mainScript.Morir();
+        rb.AddExplosionForce(fuerzaExplosion, puntoImpacto, radioExplosion, upModifier, ForceMode.Impulse);
     }
 }
