@@ -1739,8 +1739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &4690947220992673407
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1855,8 +1855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &6813444800538088785
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1971,8 +1971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &3585397619335711953
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2093,8 +2093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!65 &3473730932135145556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2276,8 +2276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!65 &802462362836493231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2344,8 +2344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &7534223166464308112
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2460,8 +2460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &3466367293616063016
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2576,8 +2576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &5493842147992976945
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2692,8 +2692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 2
 --- !u!135 &7827453089794708892
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2806,8 +2806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &8479568277723105151
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2922,8 +2922,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb325be649361843b378176cc3c63fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScript: {fileID: 0}
-  multiplicadorDanho: 0
+  mainScript: {fileID: 5313635786004952079}
+  multiplicadorDanho: 1
 --- !u!136 &4464124002075545415
 CapsuleCollider:
   m_ObjectHideFlags: 0

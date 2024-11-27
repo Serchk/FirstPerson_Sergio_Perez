@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,8 +62,20 @@ public class Enemigo : MonoBehaviour
         {
             agent.isStopped = true;
             anim.SetBool("Attack", true);
+            EnfocarObjetivo();
         }
     }
+
+    private void EnfocarObjetivo()
+    {
+        Vector3 direccionAObjetivo = (player.transform.position - transform.position).normalized;
+
+        direccionAObjetivo.y = 0;
+        Quaternion rotacionAObjetivo = Quaternion.LookRotation(direccionAObjetivo);
+
+        transform.rotation = rotacionAObjetivo;
+    }
+
     private void FinAtaque()
     {
         agent.isStopped = false;
