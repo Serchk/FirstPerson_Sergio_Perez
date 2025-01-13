@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 
-public class Mele : MonoBehaviour
+public class Taser : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem system;
     private Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -15,9 +16,14 @@ public class Mele : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            anim.SetTrigger("Atacar");
+            system.Play();
+            anim.SetBool("Attack", true);        
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
         }
     }
     private void FinAtaque()

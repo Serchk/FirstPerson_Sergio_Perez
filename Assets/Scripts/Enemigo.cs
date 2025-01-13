@@ -50,7 +50,7 @@ public class Enemigo : MonoBehaviour
         agent.SetDestination(player.gameObject.transform.position);
         if(ventanaAbierta && puedoDanhar)
         {
-            DetectarImpacto();
+            RobarFlores();
         }
 
     }
@@ -62,6 +62,12 @@ public class Enemigo : MonoBehaviour
         {
             agent.isStopped = true;
             anim.SetBool("Attack", true);
+            EnfocarObjetivo();
+        }
+        else if(!agent.pathPending && agent.remainingDistance >= agent.stoppingDistance)
+        {
+            agent.isStopped = false;
+            anim.SetBool("Attack", false);
             EnfocarObjetivo();
         }
     }
@@ -91,7 +97,7 @@ public class Enemigo : MonoBehaviour
     {
         ventanaAbierta = false;
     }
-    private void DetectarImpacto()
+    private void RobarFlores()
     {
         Collider[] collsDetectatos = Physics.OverlapSphere(puntoAtaque.position, radioAtaque, queEsDanhable);
 
