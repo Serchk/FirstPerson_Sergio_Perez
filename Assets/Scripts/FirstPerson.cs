@@ -79,6 +79,7 @@ public class FirstPerson : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("pulsando");
             movimientoVertical.y = Mathf.Sqrt(-2 * factorGravedad * alturaSalto);
         }
     }
