@@ -22,7 +22,7 @@ public class Enemigo : MonoBehaviour
 
     [SerializeField] private float danhoEnemigo;
 
-    private bool ventanaAbierta;
+    //private bool ventanaAbierta;
 
     Rigidbody[] huesos;
 
@@ -47,11 +47,11 @@ public class Enemigo : MonoBehaviour
         {
             Perseguir();
         }   
-        agent.SetDestination(player.gameObject.transform.position);
-        if(ventanaAbierta && puedoDanhar)
-        {
-            RobarFlores();
-        }
+        //agent.SetDestination(player.gameObject.transform.position);
+        //if(ventanaAbierta && puedoDanhar)
+        //{
+        //    RobarFlores();
+        //}
 
     }
     private void Perseguir()
@@ -89,27 +89,27 @@ public class Enemigo : MonoBehaviour
         puedoDanhar = true;
     }
 
-    private void AbrirVentanaAtaque()
-    {
-        ventanaAbierta = true;
-    }
-    private void CerrarVentanaAtaque()
-    {
-        ventanaAbierta = false;
-    }
-    private void RobarFlores()
-    {
-        Collider[] collsDetectatos = Physics.OverlapSphere(puntoAtaque.position, radioAtaque, queEsDanhable);
+    //private void AbrirVentanaAtaque()
+    //{
+    //    ventanaAbierta = true;
+    //}
+    //private void CerrarVentanaAtaque()
+    //{
+    //    ventanaAbierta = false;
+    //}
+    //private void RobarFlores()
+    //{
+    //    Collider[] collsDetectatos = Physics.OverlapSphere(puntoAtaque.position, radioAtaque, queEsDanhable);
 
-        if(collsDetectatos.Length > 0)
-        {
-            for(int i = 0; i < collsDetectatos.Length; i++)
-            {
-                collsDetectatos[i].GetComponent<FirstPerson>().RecibirDanho(danhoEnemigo);
-            }
-            puedoDanhar = false;
-        }
-    }
+    //    if(collsDetectatos.Length > 0)
+    //    {
+    //        for(int i = 0; i < collsDetectatos.Length; i++)
+    //        {
+    //            collsDetectatos[i].GetComponent<FirstPerson>().RecibirDanho(danhoEnemigo);
+    //        }
+    //        puedoDanhar = false;
+    //    }
+    //}
 
     private void CambiarEstadoHuesos(bool estado)
     {   

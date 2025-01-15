@@ -5270,7 +5270,7 @@ Transform:
   m_GameObject: {fileID: 938722508575198777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.59, z: 0}
+  m_LocalPosition: {x: 0, y: -0.437, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5368,14 +5368,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7955162834151320645}
-  - component: {fileID: 1559034823636428641}
   m_Layer: 0
   m_Name: Flowers_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7955162834151320645
 Transform:
   m_ObjectHideFlags: 0
@@ -5393,29 +5392,6 @@ Transform:
   - {fileID: 4379113126204524138}
   m_Father: {fileID: 1142269974341792656}
   m_LocalEulerAnglesHint: {x: 10.702, y: -100.434, z: -35.117}
---- !u!205 &1559034823636428641
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310986153491585092}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.012398988, y: 0.17197157, z: -0.014184937}
-  m_Size: 0.36239764
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.051319983
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 2125763431232281015}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 4565267054215765797}
-  m_Enabled: 1
 --- !u!1 &1515364136170983790
 GameObject:
   m_ObjectHideFlags: 0
@@ -10577,7 +10553,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetos:
   - {fileID: 4721631891247014733}
-  - {fileID: 4721631891247014733}
+  - {fileID: 4456769337314995114}
+  - {fileID: 1310986153491585092}
+  - {fileID: 2983797838274944624}
 --- !u!1 &2369941162019741117
 GameObject:
   m_ObjectHideFlags: 0
@@ -10975,7 +10953,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7406175421031056016}
-  - component: {fileID: 2841434462115893333}
   m_Layer: 0
   m_Name: flower01 (1)
   m_TagString: Untagged
@@ -11007,27 +10984,6 @@ Transform:
   - {fileID: 5969379175848761959}
   m_Father: {fileID: 1142269974341792656}
   m_LocalEulerAnglesHint: {x: 0, y: 60.61, z: 18.942}
---- !u!95 &2841434462115893333
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2983797838274944624}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: da1981c3ee8ea7e4186a753e15495628, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3042443279107815308
 GameObject:
   m_ObjectHideFlags: 0
@@ -11039,7 +10995,6 @@ GameObject:
   - component: {fileID: 8624570784547732439}
   - component: {fileID: 7820515351242294732}
   - component: {fileID: 2125763431232281015}
-  - component: {fileID: 6868931369516470700}
   m_Layer: 0
   m_Name: Flowers_02_LOD0
   m_TagString: Untagged
@@ -11112,27 +11067,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6868931369516470700
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3042443279107815308}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.36221355, z: 0.2}
-  m_Center: {x: 0, y: 0.17206362, z: 0}
 --- !u!1 &3160302533410550425
 GameObject:
   m_ObjectHideFlags: 0
@@ -11454,7 +11388,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7348880229576964820}
-  - component: {fileID: 899264446886780961}
   m_Layer: 0
   m_Name: Flowers_01 (1)
   m_TagString: Untagged
@@ -11479,29 +11412,6 @@ Transform:
   - {fileID: 3716761931852796133}
   m_Father: {fileID: 1142269974341792656}
   m_LocalEulerAnglesHint: {x: -13.537, y: -150.865, z: -15.99}
---- !u!205 &899264446886780961
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4456769337314995114}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.027090028, y: 0.1818975, z: -0.027729183}
-  m_Size: 0.3828378
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.054522518
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 3095178954556112558}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 7488602938537179218}
-  m_Enabled: 1
 --- !u!1 &4592371498890591037
 GameObject:
   m_ObjectHideFlags: 0
@@ -12396,7 +12306,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6396117830038491448}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2555171082828219471}
+        m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6372455396452223644
 GameObject:
   m_ObjectHideFlags: 0
@@ -13308,7 +13230,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8520073274741169128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2555171082828219471}
+        m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8273772639569034847
 GameObject:
   m_ObjectHideFlags: 0
@@ -13674,7 +13608,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 720751109635433391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2555171082828219471}
+        m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
+        m_MethodName: ReiniciarNivel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8453049646118912290
 GameObject:
   m_ObjectHideFlags: 0
@@ -13966,7 +13912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanciaInteraccion: 3
   objetos:
-  - {fileID: 4456769337314995114}
+  - {fileID: 4721631891247014733}
   - {fileID: 4456769337314995114}
 --- !u!114 &4758293458115876468
 MonoBehaviour:
@@ -14239,7 +14185,6 @@ GameObject:
   - component: {fileID: 4645222723533391731}
   - component: {fileID: 9151985728284101463}
   - component: {fileID: 3095178954556112558}
-  - component: {fileID: 6516344316677986184}
   m_Layer: 0
   m_Name: Flowers_01_LOD0
   m_TagString: Untagged
@@ -14312,27 +14257,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6516344316677986184
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9048859224636309817}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.3828378, z: 0.2}
-  m_Center: {x: 0, y: 0.1818975, z: 0}
 --- !u!1 &9050394095721169485
 GameObject:
   m_ObjectHideFlags: 0

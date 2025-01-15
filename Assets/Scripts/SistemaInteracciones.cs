@@ -11,7 +11,7 @@ public class SistemaInteracciones : MonoBehaviour
     private Camera cam;
     private Transform interactuableActual;
 
-    [SerializeField] private GameObject[] objetos;
+    //[SerializeField] private GameObject[] objetos;
     // Start is called before the first frame update
     void Start()
     {

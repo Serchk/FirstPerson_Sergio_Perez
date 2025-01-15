@@ -5,7 +5,7 @@ using UnityEngine.Video;
 
 public class FirstPerson : MonoBehaviour
 {
-    [SerializeField] float vida;
+    //[SerializeField] float vida;
     [Header("Movimiento")]
     [SerializeField] private float velocidadMovimiento;
     [SerializeField] private float factorGravedad;
@@ -43,10 +43,10 @@ public class FirstPerson : MonoBehaviour
             Saltar();
         }
     }
-    public void RecibirDanho(float danhoEnemigo)
-    {
-        vida -= danhoEnemigo;
-    }
+    //public void RecibirDanho(float danhoEnemigo)
+    //{
+    //    vida -= danhoEnemigo;
+    //}
     void MoverTRotar()
     {
         float h = Input.GetAxisRaw("Horizontal");
