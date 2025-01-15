@@ -19,15 +19,18 @@ public class MenuPausa : MonoBehaviour
     public void ReiniciarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
     public void Menu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
     public void Play()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); Para cuando tienes varios niveles
         SceneManager.LoadScene(1);
+        Time.timeScale = 1;
 
     }
     public void Continue()
@@ -37,6 +40,8 @@ public class MenuPausa : MonoBehaviour
     }
     public void Exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(2);
+        Time.timeScale = 1;
+        //Application.Quit();
     }
 }

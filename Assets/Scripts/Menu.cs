@@ -54,6 +54,16 @@ public class Menu : MonoBehaviour
                     Debug.Log("Saliendo...");
                 }
             }
+            else if (hitInfo.transform.TryGetComponent(out Maceta3 scriptMaceta3))
+            {
+                interactuableActual = scriptMaceta3.transform;
+                interactuableActual.GetComponent<Outline>().enabled = true;
+                scriptMaceta3.PlantarFlor();
+                if (Input.GetMouseButton(0))
+                {
+                    SceneManager.LoadScene(2);
+                }
+            }
 
             else if (interactuableActual != null)
             {
