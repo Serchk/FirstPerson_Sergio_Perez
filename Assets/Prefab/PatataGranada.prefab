@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158abfcf5b62a3444a891fe9688c3adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaImpulse: 25
+  fuerzaImpulse: 30
   radioExplosion: 1.96
   tiempoParaExplotar: 0.5
-  fuerzaExplosion: 1.87
+  fuerzaExplosion: 86.91
   explosion: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   queEsExplotable:
     serializedVersion: 2
