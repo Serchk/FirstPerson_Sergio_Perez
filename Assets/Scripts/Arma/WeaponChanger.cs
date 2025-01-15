@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class WeaponChanger : MonoBehaviour
 {
-    [SerializeField] private GameObject[] armas;
+    [SerializeField] private GameObject[] objetos;
 
-    private int indiceArmaActual;
+    private int indiceObjetoActual;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class WeaponChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CambiarArmaConTeclado();
+        CambiarObjetoConTeclado();
 
         //CambiarArmaConRaton();
 
@@ -37,45 +37,45 @@ public class WeaponChanger : MonoBehaviour
     //    }
     //}
 
-    private void CambiarArmaConTeclado()
+    private void CambiarObjetoConTeclado()
     {
         if (Input.GetKeyUp(KeyCode.Alpha1) || Input.GetKeyUp(KeyCode.Keypad1))
         {
-            CambiarArma(0);
+            CambiarObjeto(0);
         }
         if (Input.GetKeyUp(KeyCode.Alpha2) || Input.GetKeyUp(KeyCode.Keypad2))
         {
-            CambiarArma(1);
+            CambiarObjeto(1);
         }
         if (Input.GetKeyUp(KeyCode.Alpha3) || Input.GetKeyUp(KeyCode.Keypad3))
         {
-            CambiarArma(2);
+            CambiarObjeto(2);
         }
         if (Input.GetKeyUp(KeyCode.Alpha4) || Input.GetKeyUp(KeyCode.Keypad4))
         {
-            CambiarArma(3);
+            CambiarObjeto(3);
         }
         if (Input.GetKeyUp(KeyCode.Alpha5) || Input.GetKeyUp(KeyCode.Keypad5))
         {
-            CambiarArma(4);
+            CambiarObjeto(4);
         }
 
     }
 
-    private void CambiarArma(int indiceNuevaArma)
+    private void CambiarObjeto(int indiceNuevaArma)
     {
-        armas[indiceArmaActual].SetActive(false); 
+        objetos[indiceObjetoActual].SetActive(false); 
         
         if(indiceNuevaArma < 0)
         {
-            indiceNuevaArma = armas.Length - 1;
+            indiceNuevaArma = objetos.Length - 1;
         }
-        if (indiceNuevaArma > armas.Length)
+        if (indiceNuevaArma > objetos.Length)
         {
             indiceNuevaArma = 0;
         }  
 
-        armas[indiceNuevaArma].SetActive(true);
-        indiceArmaActual = indiceNuevaArma;
+        objetos[indiceNuevaArma].SetActive(true);
+        indiceObjetoActual = indiceNuevaArma;
     }
 }

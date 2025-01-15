@@ -10,6 +10,8 @@ public class SistemaInteracciones : MonoBehaviour
 
     private Camera cam;
     private Transform interactuableActual;
+
+    [SerializeField] private GameObject[] objetos;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,16 @@ public class SistemaInteracciones : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     scriptCaja.AbrirCaja();
+                }
+            }
+            else if (hitInfo.transform.TryGetComponent(out Maceta scriptMaceta))
+            {
+                interactuableActual = scriptMaceta.transform;
+                interactuableActual.GetComponent<Outline>().enabled = true;
+
+                if(Input.GetKeyDown(KeyCode.E) )
+                {
+                    scriptMaceta.PlantarFlor();
                 }
             }
             else if (interactuableActual != null)

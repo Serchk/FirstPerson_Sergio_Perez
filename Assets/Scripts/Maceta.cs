@@ -12,5 +12,12 @@ public class Maceta : MonoBehaviour
     public void PlantarFlor()
     {
         anim.SetTrigger("Plantar");
+        anim.SetBool("Plantado", true);
     }
+    
+    public void AbsorberFlor()
+    {
+        anim.SetBool("Plantado", false);
+    }
+
 }
