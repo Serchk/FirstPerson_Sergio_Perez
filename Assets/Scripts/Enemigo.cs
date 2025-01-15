@@ -24,7 +24,7 @@ public class Enemigo : MonoBehaviour
 
     //private bool ventanaAbierta;
 
-    Rigidbody[] huesos;
+    [SerializeField] Rigidbody[] huesos;
 
     public float Vidas { get => vidas; set => vidas = value; }
 
@@ -115,7 +115,7 @@ public class Enemigo : MonoBehaviour
     {   
             for (int i = 0; i < huesos.Length; i++)
             {
-                huesos[i].isKinematic = true;
+                huesos[i].isKinematic = estado;
             }
     }
     private void RecibirDanho(float danhoRecibido)

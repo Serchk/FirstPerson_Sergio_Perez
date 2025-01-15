@@ -2215,6 +2215,18 @@ MonoBehaviour:
     m_Bits: 0
   misDatos: {fileID: 0}
   danhoEnemigo: 0
+  huesos:
+  - {fileID: 9123548167781955373}
+  - {fileID: 7421945681673919120}
+  - {fileID: 8968655492320436741}
+  - {fileID: 541069792081183991}
+  - {fileID: 1236608620031878204}
+  - {fileID: 4882065004099408206}
+  - {fileID: 2597987496341074357}
+  - {fileID: 5439524118634084715}
+  - {fileID: 3389191579319191721}
+  - {fileID: 8730573926242941291}
+  - {fileID: 6928435004430201964}
 --- !u!195 &337221026339242413
 NavMeshAgent:
   m_ObjectHideFlags: 0
