@@ -5270,7 +5270,7 @@ Transform:
   m_GameObject: {fileID: 938722508575198777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.437, z: 0}
+  m_LocalPosition: {x: 0, y: -0.549, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10556,6 +10556,7 @@ MonoBehaviour:
   - {fileID: 4456769337314995114}
   - {fileID: 1310986153491585092}
   - {fileID: 2983797838274944624}
+  - {fileID: 7450843964044486680}
 --- !u!1 &2369941162019741117
 GameObject:
   m_ObjectHideFlags: 0
@@ -12965,7 +12966,7 @@ Transform:
   m_GameObject: {fileID: 8136669081013234988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.52308893, z: 0}
+  m_LocalPosition: {x: 0, y: 0.693089, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13730,7 +13731,7 @@ Transform:
   m_GameObject: {fileID: 8549234997130855424}
   serializedVersion: 2
   m_LocalRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045256, w: -0.37262258}
-  m_LocalPosition: {x: 0, y: 0.52308893, z: 0}
+  m_LocalPosition: {x: 0, y: 0.693089, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13890,7 +13891,7 @@ Transform:
   m_GameObject: {fileID: 8653069429076140751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.17, z: 0}
   m_LocalScale: {x: 0.8303, y: 0.8303, z: 0.8303}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13911,9 +13912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanciaInteraccion: 3
-  objetos:
-  - {fileID: 4721631891247014733}
-  - {fileID: 4456769337314995114}
 --- !u!114 &4758293458115876468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13926,10 +13924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d0f9c2a4c0504489708d7d953a19b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 0
   velocidadMovimiento: 5
   factorGravedad: -9.81
-  alturaSalto: 2
+  alturaSalto: 0.5
   radioDeteccion: 0.5
   pies: {fileID: 7116231433596943031}
   queEsSuelo:

@@ -12,7 +12,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float radioAtaque;
     [SerializeField] private LayerMask queEsDanhable;
     [SerializeField] private ArmaSO misDatos;
-
+    
     
     private bool puedoDanhar = true;
 
@@ -47,6 +47,7 @@ public class Enemigo : MonoBehaviour
         {
             Perseguir();
         }   
+       
         //agent.SetDestination(player.gameObject.transform.position);
         //if(ventanaAbierta && puedoDanhar)
         //{

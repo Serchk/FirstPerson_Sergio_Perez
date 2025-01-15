@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class FirstPerson : MonoBehaviour
 
     [SerializeField] GameObject canvasPausa;
     [SerializeField] GameObject canvasMira;
+
+    [SerializeField] private GameObject spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +39,26 @@ public class FirstPerson : MonoBehaviour
         MoverTRotar();
         CanvasPausa();
         AplicarGravedad();
-
+        IniciarSpawns();
         if (EnSuelo())
         {
             movimientoVertical.y = 0;
             Saltar();
         }
     }
+
+    private void IniciarSpawns()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            spawn.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            spawn.SetActive(false);
+        }
+    }
+
     //public void RecibirDanho(float danhoEnemigo)
     //{
     //    vida -= danhoEnemigo;
