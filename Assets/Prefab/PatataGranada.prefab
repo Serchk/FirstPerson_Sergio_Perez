@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerzaImpulse: 25
-  radioExplosion: 0
-  fuerzaExplosion: 0
+  radioExplosion: 1.96
+  tiempoParaExplotar: 0.5
+  fuerzaExplosion: 1.87
   explosion: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   queEsExplotable:
     serializedVersion: 2

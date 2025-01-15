@@ -7001,7 +7001,7 @@ PrefabInstance:
     - target: {fileID: 3577006768117075091, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4246828584053315113, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
@@ -8097,7 +8097,7 @@ PrefabInstance:
     - target: {fileID: 3577006768117075091, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4246828584053315113, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
@@ -10396,6 +10396,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854650113}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1137816797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7450843964044486680, guid: 16ca8e27be6b7b645b5b61b0d2433911,
+    type: 3}
+  m_PrefabInstance: {fileID: 1709519185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1138368361
 GameObject:
   m_ObjectHideFlags: 0
@@ -16098,6 +16104,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerFirstPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 5548600316734208593, guid: 16ca8e27be6b7b645b5b61b0d2433911,
+        type: 3}
+      propertyPath: objetos.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548600316734208593, guid: 16ca8e27be6b7b645b5b61b0d2433911,
+        type: 3}
+      propertyPath: objetos.Array.data[4]
+      value: 
+      objectReference: {fileID: 1137816797}
     - target: {fileID: 6558551392295922889, guid: 16ca8e27be6b7b645b5b61b0d2433911,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19790,7 +19806,7 @@ PrefabInstance:
     - target: {fileID: 3577006768117075091, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4246828584053315113, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
@@ -19805,7 +19821,7 @@ PrefabInstance:
     - target: {fileID: 4246828584053315113, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.98454
+      value: 60.24
       objectReference: {fileID: 0}
     - target: {fileID: 4246828584053315113, guid: 95bc73bdc720b8a4cb5d5b1355a9d1f3,
         type: 3}

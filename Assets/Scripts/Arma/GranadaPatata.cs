@@ -10,6 +10,7 @@ public class GranadaPatata : MonoBehaviour
 
     //[Header "Explosion"]
     [SerializeField] private float radioExplosion;
+    [SerializeField] private float tiempoParaExplotar;
     [SerializeField] private float fuerzaExplosion;
     [SerializeField] private GameObject explosion;
     [SerializeField] private LayerMask queEsExplotable;
@@ -21,7 +22,7 @@ public class GranadaPatata : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * 8, ForceMode.Impulse);
         rb.AddTorque(transform.forward * 1, ForceMode.Impulse);
-        Destroy(gameObject, 5);
+        Destroy(gameObject, tiempoParaExplotar);
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class GranadaPatata : MonoBehaviour
             {
                 if (buffer[i].TryGetComponent(out ParteEnemigo scriptHueso))
                 {
-                    scriptHueso.Explotar(fuerzaExplosion, transform.position, radioExplosion, 3.5f);
+                    scriptHueso.Explotar(fuerzaExplosion, transform.position, radioExplosion, 1f);
                 }
             }
         }
