@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Menu : MonoBehaviour
     private Camera cam;
     private Transform interactuableActual;
 
-    [SerializeField] private GameObject[] objetos;
+    //[SerializeField] private GameObject[] objetos;
     Maceta scriptAbsFlor;
 
     void Start()
@@ -39,9 +40,21 @@ public class Menu : MonoBehaviour
                 scriptMaceta.PlantarFlor();
                 if (Input.GetMouseButton(0))
                 {
-                    
+                    SceneManager.LoadScene(1);
                 }
             }
+            else if (hitInfo.transform.TryGetComponent(out Maceta2 scriptMaceta2))
+            {
+                interactuableActual = scriptMaceta2.transform;
+                interactuableActual.GetComponent<Outline>().enabled = true;
+                scriptMaceta2.PlantarFlor();
+                if (Input.GetMouseButton(0))
+                {
+                    Application.Quit();
+                    Debug.Log("Saliendo...");
+                }
+            }
+
             else if (interactuableActual != null)
             {
                 //scriptAbsFlor.AbsorberFlor();

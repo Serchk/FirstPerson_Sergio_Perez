@@ -19,11 +19,14 @@ public class FirstPerson : MonoBehaviour
 
     CharacterController controller;
     private Vector3 movimientoVertical;
+
+    [SerializeField] GameObject canvasPausa;
+    [SerializeField] GameObject canvasMira;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
+        canvasMira = GetComponent<GameObject>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -31,7 +34,7 @@ public class FirstPerson : MonoBehaviour
     void Update()
     {
         MoverTRotar();
-
+        CanvasPausa();
         AplicarGravedad();
 
         if (EnSuelo())
@@ -73,6 +76,26 @@ public class FirstPerson : MonoBehaviour
         //    transform.eulerAngles = new Vector3(0, anguloRotacion, 0);
         //    controller.Move(movimiento * velocidadMovimiento * Time.deltaTime);
         //}
+
+    }
+    private void CanvasPausa()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvasPausa.SetActive(!canvasPausa.activeSelf);
+            if (canvasPausa.activeSelf)
+            {
+                Time.timeScale = 0.2f;
+                Cursor.lockState = CursorLockMode.None;
+                //canvasMira.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
+                //canvasMira.SetActive(true);
+            }
+        }
 
     }
     private void Saltar()

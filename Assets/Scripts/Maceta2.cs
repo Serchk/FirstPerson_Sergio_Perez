@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Maceta : MonoBehaviour
+public class Maceta2 : MonoBehaviour
 {
     private Animator anim;
     private void Start()
@@ -14,10 +14,9 @@ public class Maceta : MonoBehaviour
         anim.SetTrigger("Plantar");
         //anim.SetBool("Plantado", true);
     }
-    
+
     //public void AbsorberFlor()
     //{
     //    anim.SetBool("Plantado", false);
     //}
-
 }
